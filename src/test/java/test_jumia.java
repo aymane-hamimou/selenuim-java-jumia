@@ -2,7 +2,8 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.*;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
@@ -20,7 +21,7 @@ public class test_jumia {
         // Cette méthode s'exécute une seule fois avant tous les tests
         @BeforeAll
         public static void setUp() {
-            driver = new ChromeDriver(); // Initialisation du navigateur Chrome
+            driver = new EdgeDriver(); // Initialisation du navigateur Chrome
             driver.get("https://www.jumia.ma/"); // Accès au site Jumia
             driver.manage().window().maximize(); // Maximisation de la fenêtre du navigateur
 
@@ -206,11 +207,11 @@ public class test_jumia {
             }
 
         // Méthode exécutée après tous les tests pour fermer le navigateur
-            @AfterAll
-            public static void tearDown() {
-                if (driver != null) {
-                    driver.quit();
-                }
-            }
+//            @AfterAll
+//            public static void tearDown() {
+//                if (driver != null) {
+//                    driver.quit();
+//                }
+//            }
 
 }
